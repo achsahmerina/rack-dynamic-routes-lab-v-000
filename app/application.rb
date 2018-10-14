@@ -11,7 +11,7 @@ class Application
 
       list = @@items.find{|fruit_price| fruit_price.name == fruit}
 
-      if item.nil?
+      if list.nil?
         resp.write "Item not found"
         resp.status = 400
       else
