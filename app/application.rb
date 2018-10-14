@@ -4,7 +4,7 @@ class Application
 
   def call(route)
    resp = Rack::Response.new
-   req = Rack::Request.new(env)
+   req = Rack::Request.new(route)
 
    if req.path.match(/items/)
      item_name = req.path.split("/items/").last
