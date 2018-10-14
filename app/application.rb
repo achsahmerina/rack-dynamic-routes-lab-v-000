@@ -9,7 +9,7 @@ class Application
    if req.path.match(/items/)
      fruit = req.path.split("/items/").last
 
-     item = @@items.find{|fruit| fruit.name == fruit}
+     list = @@items.find{|fruit| fruit.name == fruit}
 
      if item.nil?
        resp.write "Item not found"
